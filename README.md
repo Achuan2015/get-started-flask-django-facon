@@ -1,4 +1,4 @@
-# AImodel2service
+# Get-Started-Flask
 
 ## 写在前面
 介绍了使用Django和Flask建立微服务的方法
