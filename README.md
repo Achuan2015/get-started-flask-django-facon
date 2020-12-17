@@ -338,10 +338,6 @@ Content-Length: 144
 ["\u4eca\u5929", "\u4e0a\u6d77", "\u771f\u7684", "\u597d", "\u51b7", "\u554a", "\uff01", "\u6211", "\u4e5f", "\u89c9\u5f97", "\u554a", "\uff01"]%
 ```
 
-第二种 在chrome 浏览中安装插件 `Restlet Client`, 推荐第二种，因为支持配置文件导入和保存已经测试过的配置文件；
-
-![Screenshot](pics/screenshot2.png)
-
 ## 小结
 熟悉了Web框架，我们在编写Web应用时，注意力就从WSGI处理函数转移到URL+对应的处理函数，这样，编写Web App就简单了。更多的功能还是需要个人去读官网文档，毕竟那里才是最权威；
 
