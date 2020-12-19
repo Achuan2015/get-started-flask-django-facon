@@ -9,10 +9,10 @@
 
 **主要的优点：**（[参考github页面](https://github.com/falconry/falcon))
 
-* Fast. 
-* Reliable. 
-* Flexible. 
-* Debuggable. 
+* Fast.
+* Reliable.
+* Flexible.
+* Debuggable.
 
 
 ## 案例说明
@@ -28,7 +28,7 @@ pip install falcon
 
 ## 创建hello.py
 ```python
-#hello.py                                                                                              
+#hello.py
 import falcon #导入falcon
 import json  #导入json处理模块
 import jieba #导入分词器模块
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     httpd = simple_server.make_server('127.0.0.1', 8000, app)
     print("Serving on port 8000...")
     httpd.serve_forever()
-    
+
 ```
 
 
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 ```bash
 $ python hello.py
 Serving on port 8000... #服务正常启动，等待连接
- 
+
 ```
 
 ## 测试我们定义好的API
@@ -84,22 +84,15 @@ curl -i -H "Content-type: application/json" -X POST http://127.0.0.1:8000/token 
     {
         "text":"今天上海真的好冷啊！我也觉得啊！"
     }'
-    
+
 ```
 如果服务正常工作会得到如下返回：
 
 ```bash
-{"response": ["\u4eca\u5929", "\u4e0a\u6d77", "\u771f\u7684", "\u597d", "\u51b7", "\u554a", "\uff01", "\u6211", "\u4e5f", "\u89c9\u5f97", "\u554a", "\uff01"]}
+{"response":["今天", "上海", "真的", "好", "冷", "啊", "！", "我", "也", "觉u5f97", "啊", "！"]}
 ```
 如果传入的数据异常会得到如下返回：
 ```bash
 {"response": "value error"}
 ```
-
-
-
-
-
-
-
 

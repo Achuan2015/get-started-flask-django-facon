@@ -1,9 +1,11 @@
-import falcon #导入falcon
-import json  #导入json处理模块
-import jieba #导入分词器模块
-from wsgiref import simple_server #导入wsgi(Web Server Gateway Interface )服务模块
+import falcon  # 导入falcon
+import json  # 导入json处理模块
+import jieba  # 导入分词器模块
+from wsgiref import simple_server  # 导入wsgi(Web Server Gateway Interface )服务模块
 
-token = lambda x:list(jieba.cut(x)) #定义分词器处理函数
+#定义分词器处理函数
+def token(x):
+    return jieba.lcut(x)
 
 # Falcon follows the REST architectural style, meaning (among
 # other things) that you think in terms of resources and state
@@ -19,11 +21,12 @@ class Resource(object):
         try:
             raw_json = json.loads(req.stream.read())
             words = token(raw_json['text'])
-            resp.body =  json.dumps({"response": words})
-        except:
+            resp.body = json.dumps({"response": words})
+        except exception as e:
             #处理异常
             resp.status = falcon.HTTP_404
             resp.body = json.dumps({"response": "value error"})
+
 
 # 初始化falcon.API
 app = falcon.API()
