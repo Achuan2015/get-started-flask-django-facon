@@ -335,7 +335,7 @@ Content-Type: application/json
 X-Frame-Options: SAMEORIGIN
 Content-Length: 144
 
-["\u4eca\u5929", "\u4e0a\u6d77", "\u771f\u7684", "\u597d", "\u51b7", "\u554a", "\uff01", "\u6211", "\u4e5f", "\u89c9\u5f97", "\u554a", "\uff01"]%
+["今天", "上海", "真的", "好", "冷", "啊", "！", "我", "也", "觉得", "啊", "！"]
 ```
 
 ## 小结
